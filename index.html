@@ -2,20 +2,199 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>העולם של זוהר</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zohar's English World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700;800&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; text-align: center; background: #e0f2fe; padding: 50px; }
-        .box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-block; }
-        h1 { color: #0369a1; }
-        .btn { background: #f72585; color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; }
+        :root {
+            --primary: #4CC9F0;
+            --secondary: #4361EE;
+            --accent: #F72585;
+            --yellow: #FFD60A;
+            --soft-blue: #F0F7FF;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--soft-blue);
+            color: #2b2d42;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 20px 120px;
+            text-align: center;
+            border-radius: 0 0 80px 80px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-badge {
+            background: var(--yellow);
+            color: #4361EE;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 { font-family: 'Fredoka', sans-serif; font-size: 3.5rem; margin: 0; text-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        
+        .typing-container {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: bold;
+            height: 40px;
+            margin: 20px 0;
+        }
+
+        /* Container & Cards */
+        .container { max-width: 1100px; margin: -60px auto 60px; padding: 0 20px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 35px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-bottom: 5px solid transparent;
+        }
+
+        .card:hover { transform: translateY(-15px); border-bottom-color: var(--accent); }
+
+        .icon-img { width: 80px; height: 80px; margin-bottom: 20px; }
+
+        /* Age Group Tags */
+        .age-group {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .p-3 { background: #FFADAD; color: white; }
+        .p-4 { background: #FFD6A5; color: white; }
+        .p-5 { background: #CAFFBF; color: #333; }
+        .p-6 { background: #A0C4FF; color: white; }
+
+        /* CTA Button */
+        .btn-call {
+            background: var(--accent);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 100px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 25px rgba(247, 37, 133, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn-call:hover { transform: scale(1.1); background: #D81E72; }
+
+        footer {
+            background: #2B2D42;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 60px 60px 0 0;
+        }
+
+        /* SVG Background Wave */
+        .wave { position: absolute; bottom: 0; left: 0; width: 100%; line-height: 0; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>העולם של זוהר - בקרוב! 🌟</h1>
-        <p>כאן יקום האתר המדהים ללימוד אנגלית.</p>
-        <br><br>
-        <a href="#" class="btn">בואי נבנה את זה!</a>
+
+    <header>
+        <div class="hero-badge">HI TEACHER ZOHAR! 👋</div>
+        <h1>העולם של זוהר</h1>
+        <div class="typing-container" id="typewriter"></div>
+        <p style="max-width: 600px; margin: 0 auto; opacity: 0.9; font-size: 1.2rem;">הבית הדיגיטלי החדש שלך ושל התלמידים. כל משחק, כל סרטון וכל מילה - הכל במקום אחד.</p>
+        
+        <div class="wave">
+            <svg viewBox="0 0 1440 120"><path fill="#F0F7FF" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,59.3L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3408/3408545.png" class="icon-img" alt="Games">
+                <h3>Game Zone</h3>
+                <p>משחקים אינטראקטיביים לתרגול אוצר מילים ודקדוק בדרך חווייתית.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3074/3074130.png" class="icon-img" alt="Videos">
+                <h3>Video Lessons</h3>
+                <p>מאגר סרטונים קצרים שמסבירים חוקי שפה בצורה פשוטה וזכירה.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3898/3898082.png" class="icon-img" alt="Vocabulary">
+                <h3>Vocabulary Hub</h3>
+                <p>מילים מחולקות לקטגוריות עם תמונות ושמע לשיפור ההגייה.</p>
+            </div>
+        </div>
+
+        <div class="age-group">
+            <h2 style="font-family: 'Fredoka'; font-size: 2rem; color: var(--secondary);">מותאם בדיוק לשכבות הגיל שלך:</h2>
+            <div class="pill p-3">כיתה ג׳: צעדים ראשונים 🐣</div>
+            <div class="pill p-4">כיתה ד׳: בונים ביטחון 🎈</div>
+            <div class="pill p-5">כיתה ה׳: שולטים בשפה 🚀</div>
+            <div class="pill p-6">כיתה ו׳: הכנה לחטיבה 🎓</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <a href="https://wa.me/?text=זוהר, ראיתי את האתר שלך וזה פשוט מדהים!" class="btn-call">זוהר, בואי נצא לדרך! 🚀</a>
+        </div>
     </div>
+
+    <footer>
+        <h2 style="font-family: 'Fredoka';">English with Zohar</h2>
+        <p>Your creative teaching space.</p>
+        <p style="margin-top: 40px; opacity: 0.5;">נבנה באהבה עבור זוהר ❤️ | 2026</p>
+    </footer>
+
+    <script>
+        const texts = ["ללמוד אנגלית בכיף", "להצליח במבחנים", "לשחק ולדבר", "הכל במקום אחד"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) { count = 0; }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById("typewriter").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+    </script>
 </body>
 </html>
