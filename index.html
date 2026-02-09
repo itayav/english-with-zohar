@@ -3,56 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>העולם של זוהר - אנגלית בכיף</title>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <title>Zohar's English Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;800&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Assistant', sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; text-align: center; }
-        nav { background: white; padding: 15px; position: fixed; width: 100%; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 100; }
-        .hero { background: linear-gradient(135deg, #4CC9F0, #4361EE); color: white; padding: 120px 20px 60px; border-radius: 0 0 50px 50px; }
-        .container { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        .btn { background: #F72585; color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .tag { display: inline-block; background: #e0f2fe; padding: 5px 15px; border-radius: 15px; margin: 5px; color: #0369a1; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <nav>
-        <b style="color: #4361EE; font-size: 1.2rem;">Zohar's English World</b>
-    </nav>
-    <header class="hero">
-        <h1>העולם של זוהר</h1>
-        <p style="font-size: 1.2rem;">אנגלית חוויתית לכיתות ג' עד ו'</p>
-        <div id="typewriter" style="font-size: 1.5rem; font-weight: bold; color: #FFD60A; height: 30px;"></div>
-    </header>
-    <div class="container">
-        <h2>למה האתר הזה הוא חלום?</h2>
-        <div class="grid">
-            <div class="card"><h3>🎮 משחקים</h3><p>ללמוד אוצר מילים בלי להרגיש שזה שיעור.</p></div>
-            <div class="card"><h3>🎬 סרטונים</h3><p>הסברים קצרים וצבעוניים על דקדוק וזמנים.</p></div>
-            <div class="card"><h3>📱 נגישות</h3><p>התלמידים שלך יכולים ללמוד מכל טלפון או מחשב.</p></div>
-        </div>
-        <div style="margin-top: 40px;">
-            <span class="tag">כיתות ג'</span> <span class="tag">כיתות ד'</span>
-            <span class="tag">כיתות ה'</span> <span class="tag">כיתות ו'</span>
-        </div>
-        <a href="#" class="btn">בואי נבנה את זה יחד!</a>
-    </div>
-    <footer style="padding: 40px; background: #2B2D42; color: white; margin-top: 50px;">
-        נבנה באהבה עבור זוהר ❤️
-    </footer>
-    <script>
-        const text = "ללמוד... לשחק... להצליח!";
-        let i = 0;
-        function type() {
-            if (i < text.length) {
-                document.getElementById("typewriter").innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, 150);
-            }
+        :root {
+            --main-blue: #4CC9F0;
+            --dark-blue: #4361EE;
+            --pink: #F72585;
+            --yellow: #FFD60A;
+            --light-bg: #F8FBFF;
         }
-        window.onload = type;
-    </script>
-</body>
-</html>
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 10px 5%;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+
+        /* Hero Section with Graphics */
+        .hero {
+            background: linear-gradient(135deg, var(--main-blue), var(--dark-blue));
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        /* Decorative Bubbles */
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        .main-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            object-fit: cover;
+        }
+
+        /* Wave Effect */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+        }
+
+        /* Categories Section */
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 35px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-bottom: 6px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-15px);
+            border-bottom-color: var(--pink);
+        }
+
+        .category-card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .category-card h3 {
+            font-size: 1.6rem;
+            margin: 10px
