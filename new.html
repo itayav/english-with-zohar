@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף עבודה: Present Progressive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Assistant', sans-serif;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .paper {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            border: 8px solid #f3e5f5;
+        }
+        .watercolor-blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(40px);
+            opacity: 0.4;
+            border-radius: 50%;
+        }
+        .header-title {
+            font-family: 'Varela Round', sans-serif;
+            color: #6d4c41;
+            text-align: center;
+            border-bottom: 2px dashed #d7ccc8;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .instruction {
+            background-color: #fce4ec;
+            padding: 10px 15px;
+            border-right: 5px solid #f06292;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .task-box {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .question-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #eeeeee;
+        }
+        .word-bank {
+            background: #e8f5e9;
+            border: 2px solid #a5d6a7;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 1.1rem;
+        }
+        .kitchen-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: block;
+        }
+        .input-line {
+            border: none;
+            border-bottom: 2px solid #ced4da;
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+            font-family: 'Assistant', sans-serif;
+            background: transparent;
+        }
+        .input-line:focus {
+            border-bottom-color: #f06292;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .paper { box-shadow: none; border: none; max-width: 100%; width: 100%; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="watercolor-blob" style="width: 300px; height: 300px; background: #f8bbd0; top: -50px; left: -50px;"></div>
+    <div class="watercolor-blob" style="width: 250px; height: 250px; background: #b2ebf2; bottom: -50px; right: -50px;"></div>
+
+    <div class="paper">
+        <div class="header-title">
+            <h1 class="text-3xl mb-2">Present Progressive Practice</h1>
+            <h2 class="text-xl">תרגול זמן הווה ממושך</h2>
+            <div class="mt-4 text-sm text-gray-500 flex justify-between px-10" dir="ltr">
+                <span>Name: _________________</span>
+                <span>Date: ___/___/___</span>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="instruction">
+                <p>Task 1: Circle the correct answer.</p>
+                <p>משימה 1: הקיפו את התשובה הנכונה.</p>
+            </div>
+            
+            <div class="space-y-6" dir="ltr">
+                <div class="question-item">
+                    <p class="font-semibold">1. My friends ________ football in the park now.</p>
+                    <div class="grid grid-cols-3 mt-2">
+                        <span>a) am playing</span>
+                        <span>b) is playing</span>
+                        <span>c) are playing</span>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p class="font-semibold">2. Look! The cat ________ on the tree.</p>
+                    <div class="grid grid-cols-3 mt-2">
+                        <span>a) am climbing</span>
+                        <span>b) is climbing</span>
+                        <span>c) are climbing</span>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p class="font-semibold">3. I ________ my homework at the moment.</p>
+                    <div class="grid grid-cols-3 mt-2">
+                        <span>a) am doing</span>
+                        <span>b) is doing</span>
+                        <span>c) are doing</span>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p class="font-semibold">4. Dana and I ________ a delicious cake.</p>
+                    <div class="grid grid-cols-3 mt-2">
+                        <span>a) am baking</span>
+                        <span>b) is baking</span>
+                        <span>c) are baking</span>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <p class="font-semibold">5. Listen! The teacher ________ to us.</p>
+                    <div class="grid grid-cols-3 mt-2">
+                        <span>a) am speaking</span>
+                        <span>b) is speaking</span>
+                        <span>c) are speaking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="instruction">
+                <p>Task 2: Match the English sentence to its Hebrew translation.</p>
+                <p>משימה 2: התאימו בין המשפט באנגלית לתרגומו הנכון בעברית.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 mt-4" dir="ltr">
+                <div class="flex-1 space-y-4">
+                    <p>1. We are eating dinner. (___)</p>
+                    <p>2. She is reading a book. (___)</p>
+                    <p>3. They are singing a song. (___)</p>
+                    <p>4. He is washing the car. (___)</p>
+                </div>
+                <div class="flex-1 space-y-4 text-right" dir="rtl">
+                    <p>א. היא קוראת ספר.</p>
+                    <p>ב. הוא שוטף את המכונית.</p>
+                    <p>ג. אנחנו אוכלים ארוחת ערב.</p>
+                    <p>ד. הם שרים שיר.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="instruction">
+                <p>Task 3: Look at the picture and write 6 sentences using the Present Progressive (am / is / are + ing).</p>
+                <p>משימה 3: הביטו בתמונה וכתבו 6 משפטים בזמן הווה ממושך.</p>
+            </div>
+
+            <div id="image-container" class="mb-4">
+                <img id="family-kitchen" 
+                     src="C:\Users\itayz\OneDrive\שולחן העבודה\הורדה.png" 
+                     class="kitchen-image" 
+                     alt="Family in the kitchen">
+            </div>
+
+            <div class="word-bank mb-6" dir="ltr">
+                <span>cook</span>
+                <span>cut</span>
+                <span>wash</span>
+                <span>drink</span>
+                <span>help</span>
+                <span>set</span>
+                <span>eat</span>
+                <span>talk</span>
+                <span>smile</span>
+                <span>pour</span>
+                <span>laugh</span>
+            </div>
+
+            <div class="space-y-4" dir="ltr">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">1.</span>
+                    <input type="text" class="input-line" placeholder="Example: Mom is cutting the vegetables.">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">2.</span>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">3.</span>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">4.</span>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">5.</span>
+                    <input type="text" class="input-line">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold">6.</span>
+                    <input type="text" class="input-line">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10 text-pink-400 font-bold italic">
+            !Good Luck! בהצלחה
+        </div>
+    </div>
+</body>
+</html>
