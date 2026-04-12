@@ -11,48 +11,116 @@
             font-family: 'Assistant', sans-serif;
             background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
             min-height: 100vh;
-            padding: 10px;
-            margin: 0;
+            padding: 20px;
         }
         .paper {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             max-width: 900px;
-            margin: 10px auto;
-            padding: 25px;
-            border: 6px solid #f3e5f5;
+            margin: 0 auto;
+            padding: 40px;
             position: relative;
-            z-index: 1;
+            overflow: hidden;
+            border: 8px solid #f3e5f5;
         }
-        /* רקע דקורטיבי בטוח יותר לסלולרי */
-        .decoration {
-            position: fixed;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            filter: blur(50px);
-            opacity: 0.3;
+        .watercolor-blob {
+            position: absolute;
             z-index: -1;
+            filter: blur(40px);
+            opacity: 0.4;
+            border-radius: 50%;
         }
         .header-title {
             font-family: 'Varela Round', sans-serif;
             color: #6d4c41;
             text-align: center;
             border-bottom: 2px dashed #d7ccc8;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
         .instruction {
             background-color: #fce4ec;
-            padding: 12px;
+            padding: 10px 15px;
             border-right: 5px solid #f06292;
             border-radius: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-weight: 600;
         }
         .task-box {
             background: #fff;
-            border: 1px solid #eee;
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
-            padding:
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .kitchen-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: block;
+        }
+        .word-bank {
+            background: #e8f5e9;
+            border: 2px solid #a5d6a7;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 1.1rem;
+        }
+        .input-line {
+            border: none;
+            border-bottom: 2px solid #ced4da;
+            width: 100%;
+            margin-top: 10px;
+            outline: none;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="paper">
+        <div class="header-title">
+            <h1 class="text-3xl mb-2">Present Progressive Practice</h1>
+            <h2 class="text-xl">תרגול זמן הווה ממושך</h2>
+        </div>
+
+        <div class="task-box">
+            <div class="instruction">
+                <p>Task 3: Look at the picture and write 6 sentences.</p>
+                <p>משימה 3: הביטו בתמונה וכתבו 6 משפטים בזמן הווה ממושך.</p>
+            </div>
+
+            <div id="image-container" class="mb-4">
+                <img id="family-kitchen" 
+                     src="https://raw.githubusercontent.com/itayav/english-with-zohar/main/family_in_kitchen.png" 
+                     class="kitchen-image" 
+                     alt="Family in the kitchen">
+            </div>
+
+            <div class="word-bank mb-6" dir="ltr">
+                <span>cook</span> <span>cut</span> <span>wash</span> <span>drink</span>
+                <span>help</span> <span>set</span> <span>eat</span> <span>talk</span>
+                <span>smile</span> <span>pour</span> <span>laugh</span>
+            </div>
+
+            <div class="space-y-4" dir="ltr">
+                <div class="flex items-center gap-2"><span class="font-bold">1.</span><input type="text" class="input-line"></div>
+                <div class="flex items-center gap-2"><span class="font-bold">2.</span><input type="text" class="input-line"></div>
+                <div class="flex items-center gap-2"><span class="font-bold">3.</span><input type="text" class="input-line"></div>
+                <div class="flex items-center gap-2"><span class="font-bold">4.</span><input type="text" class="input-line"></div>
+                <div class="flex items-center gap-2"><span class="font-bold">5.</span><input type="text" class="input-line"></div>
+                <div class="flex items-center gap-2"><span class="font-bold">6.</span><input type="text" class="input-line"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
