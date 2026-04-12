@@ -54,13 +54,10 @@
             padding: 20px;
             margin-bottom: 30px;
         }
-        .kitchen-image {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: block;
+        .question-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #eeeeee;
         }
         .word-bank {
             background: #e8f5e9;
@@ -75,52 +72,31 @@
             color: #2e7d32;
             font-size: 1.1rem;
         }
+        .kitchen-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: block;
+        }
         .input-line {
             border: none;
             border-bottom: 2px solid #ced4da;
             width: 100%;
             margin-top: 10px;
             outline: none;
+            font-family: 'Assistant', sans-serif;
             background: transparent;
+        }
+        .input-line:focus {
+            border-bottom-color: #f06292;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .paper { box-shadow: none; border: none; max-width: 100%; width: 100%; }
+            .no-print { display: none; }
         }
     </style>
 </head>
 <body>
-
-    <div class="paper">
-        <div class="header-title">
-            <h1 class="text-3xl mb-2">Present Progressive Practice</h1>
-            <h2 class="text-xl">תרגול זמן הווה ממושך</h2>
-        </div>
-
-        <div class="task-box">
-            <div class="instruction">
-                <p>Task 3: Look at the picture and write 6 sentences.</p>
-                <p>משימה 3: הביטו בתמונה וכתבו 6 משפטים בזמן הווה ממושך.</p>
-            </div>
-
-            <div id="image-container" class="mb-4">
-                <img id="family-kitchen" 
-                     src="https://raw.githubusercontent.com/itayav/english-with-zohar/main/family_in_kitchen.png" 
-                     class="kitchen-image" 
-                     alt="Family in the kitchen">
-            </div>
-
-            <div class="word-bank mb-6" dir="ltr">
-                <span>cook</span> <span>cut</span> <span>wash</span> <span>drink</span>
-                <span>help</span> <span>set</span> <span>eat</span> <span>talk</span>
-                <span>smile</span> <span>pour</span> <span>laugh</span>
-            </div>
-
-            <div class="space-y-4" dir="ltr">
-                <div class="flex items-center gap-2"><span class="font-bold">1.</span><input type="text" class="input-line"></div>
-                <div class="flex items-center gap-2"><span class="font-bold">2.</span><input type="text" class="input-line"></div>
-                <div class="flex items-center gap-2"><span class="font-bold">3.</span><input type="text" class="input-line"></div>
-                <div class="flex items-center gap-2"><span class="font-bold">4.</span><input type="text" class="input-line"></div>
-                <div class="flex items-center gap-2"><span class="font-bold">5.</span><input type="text" class="input-line"></div>
-                <div class="flex items-center gap-2"><span class="font-bold">6.</span><input type="text" class="input-line"></div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
